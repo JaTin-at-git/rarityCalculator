@@ -81,15 +81,14 @@ function setImageOf(parentID, imgName) {
             img.setAttribute('src', "upload%20freelancer/knot/" + imgName + ".png");
             break;
     }
-    calculateRarityScore();
+    setTimeout(calculateRarityScore,100);
 }
 
 function calculateRarityScore() {
     let score = 1;
     const selectors = ["skyDiv", "celestialDiv", "egroundDiv", "wgroundDiv", "balloonDiv", "reflectionDiv", "breezeDiv", "knotDiv"];
-
     for (const selector of selectors) {
-        score *= parseFloat(document.querySelector("#" + selector + " .selected").children[1].innerHTML.replaceAll("~", "").replaceAll("%", "")) / 100
+        score *= parseFloat(document.querySelector("#" + selector + " .selected").children[1].innerHTML.replaceAll("~", "").replaceAll("%", "")) / 100;
     }
     document.querySelector("#rarityScore .value").innerHTML = Number.parseFloat(score).toExponential(2);
 }
@@ -125,9 +124,4 @@ document.querySelector("#collectionNone").addEventListener('click', function () 
     for (const element of document.querySelectorAll(".upNup")) {
         element.style.display = "none";
     }
-});
-
-//in mobiles, rarity was not being calculated on click, so adding a listener that helps
-document.querySelector(".options").addEventListener("mouseup",function () {
-   calculateRarityScore();
 });
