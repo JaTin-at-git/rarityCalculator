@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="selectOptions/selectOptions.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!--    google font- pt sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+          rel="stylesheet">
+
+    <title>Rarity Calculator</title>
+
+
+</head>
+<body>
+
+<header>
+    <h1>
+        <span style="color: #A6630D">R</span><span style="color: #A50D0D">a</span><span
+            style="color: #0D8BA6">r</span><span style="color: #0DA61B">i</span><span
+            style="color: #A69E0D">t</span><span style="color: #8F0EA6">y</span>
+        <span style="color: #0DA61B">C</span><span style="color: #0D8BA6">a</span><span
+            style="color: #8F0EA6">l</span><span style="color: #A6630D">c</span><span
+            style="color: #A69E0D">u</span><span style="color: #A6630D">l</span><span
+            style="color: #A6630D">a</span><span style="color: #A6630D">t</span><span
+            style="color: #8F0EA6">o</span><span style="color: #A50D0D">r</span>
+    </h1>
+</header>
+
+<main>
+    <div class="mainframe">
+        <div class="options">
+            <!--            Collection-->
+            <div class="container" id="collection" style="display: block; margin-bottom: 20px">
+                <label for="collection">Collection</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Select Collection Name</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span id="collectionNone" class="custom-option selected" data-value="uninitialized"><span>Select Collection Name</span></span>
+                            <span id="collectionUpNup" class="custom-option"
+                                  data-value="upNup"><span>Up Up and Away</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            Sky-->
+            <div class="container upNup" id="skyDiv">
+                <label for="skyDiv">Sky</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Dawn</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="dawn"><span>Dawn </span><span>~21%</span></span>
+                            <span class="custom-option"
+                                  data-value="morning"><span>Morning </span><span>~16%</span></span>
+                            <span class="custom-option"
+                                  data-value="mid_day"><span>Mid-Day </span><span>~1%</span></span>
+                            <span class="custom-option" data-value="day"><span>Day </span><span>~25%</span></span>
+                            <span class="custom-option" data-value="dusk"><span>Dusk </span><span>~21%</span></span>
+                            <span class="custom-option" data-value="night"><span>Night </span><span>~15%</span></span>
+                            <span class="custom-option"
+                                  data-value="midnight"><span>Mid-Night </span><span>~1%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            celestial body-->
+            <div class="container upNup" id="celestialDiv">
+                <label for="celestialDiv">Celestial Body</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Sunrise</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="sr"><span>Sunrise </span><span>~1%</span></span>
+                            <span class="custom-option" data-value="rs"><span>Rising Sun </span><span>~5%</span></span>
+                            <span class="custom-option"
+                                  data-value="sz"><span>Sun at Zenith </span><span>~8.5%</span></span>
+                            <span class="custom-option" data-value="es"><span>Evening Sun </span><span>~8%</span></span>
+                            <span class="custom-option" data-value="ss"><span>Sunset </span><span>~5%</span></span>
+                            <span class="custom-option" data-value="mr"><span>Moonrise </span><span>~7%</span></span>
+                            <span class="custom-option"
+                                  data-value="rm"><span>Rising Moon </span><span>~6.5%</span></span>
+                            <span class="custom-option"
+                                  data-value="mz"><span>Moon at Zenith </span><span>~8.5%</span></span>
+                            <span class="custom-option" data-value="mln"><span>Moon Late Night </span><span>~8.5%</span></span>
+                            <span class="custom-option" data-value="ms"><span>Moonset </span><span>~8%</span></span>
+                            <span class="custom-option" data-value="cmr"><span>Crescent Moonrise </span><span>~1%</span></span>
+                            <span class="custom-option"
+                                  data-value="crm"><span>Crescent Rising Moon </span><span>~7%</span></span>
+                            <span class="custom-option"
+                                  data-value="cmz"><span>Crescent Moon at Zenith </span><span>~8%</span></span>
+                            <span class="custom-option" data-value="cmln"><span>Crescent Moon Late Night </span><span>~8.5%</span></span>
+                            <span class="custom-option"
+                                  data-value="cms"><span>Crescent Moonset </span><span>~8.5%</span></span>
+                            <span class="custom-option"
+                                  data-value="no moon"><span>Dark Night </span><span>~1%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            east ground-->
+            <div class="container upNup" id="egroundDiv">
+                <label for="egroundDiv">East Ground</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Deep Sea</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="eds"><span>Deep Sea </span><span>~10%</span></span>
+                            <span class="custom-option" data-value="ess"><span>Sea Shore </span><span>~17%</span></span>
+                            <span class="custom-option"
+                                  data-value="epm"><span>Playful Mud </span><span>~19%</span></span>
+                            <span class="custom-option"
+                                  data-value="esb"><span>Sandy Beach </span><span>~18%</span></span>
+                            <span class="custom-option" data-value="el"><span>Lawn </span><span>~15%</span></span>
+                            <span class="custom-option"
+                                  data-value="eme"><span>Mature Earth </span><span>~21%</span></span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            west ground-->
+            <div class="container upNup" id="wgroundDiv">
+                <label for="wgroundDiv">West Ground</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Deep Sea</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="wds"><span>Deep Sea </span><span>~19%</span></span>
+                            <span class="custom-option" data-value="wss"><span>Sea Shore </span><span>~17%</span></span>
+                            <span class="custom-option"
+                                  data-value="wpm"><span>Playful Mud </span><span>~18%</span></span>
+                            <span class="custom-option"
+                                  data-value="wsb"><span>Sandy Beach </span><span>~10%</span></span>
+                            <span class="custom-option" data-value="wl"><span>Lawn </span><span>~10%</span></span>
+                            <span class="custom-option"
+                                  data-value="wme"><span>Mature Earth </span><span>~20%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            joyful balloon-->
+            <div class="container upNup" id="balloonDiv">
+                <label for="balloonDiv">Joyful balloon</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Grass Green</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="gg"><span>Grass Green </span><span>~8%</span></span>
+                            <span class="custom-option" data-value="lg"><span>Leaf Green </span><span>~8%</span></span>
+                            <span class="custom-option"
+                                  data-value="sb"><span>Scarlet Black </span><span>~9%</span></span>
+                            <span class="custom-option"
+                                  data-value="sy"><span>Soothing Yellow </span><span>~9%</span></span>
+                            <span class="custom-option"
+                                  data-value="cpr"><span>Clown Party Red </span><span>~10%</span></span>
+                            <span class="custom-option"
+                                  data-value="rv"><span>Royal Violet </span><span>~7%</span></span>
+                            <span class="custom-option" data-value="sblue"><span>Sky Blue </span><span>~9%</span></span>
+                            <span class="custom-option" data-value="ds"><span>Deep Sea </span><span>~9%</span></span>
+                            <span class="custom-option" data-value="bp"><span>Baby Pink </span><span>~8.5%</span></span>
+                            <span class="custom-option" data-value="br"><span>Blush Red </span><span>~6.5%</span></span>
+                            <span class="custom-option" data-value="bb"><span>baby blue </span><span>~9%</span></span>
+                            <span class="custom-option"
+                                  data-value="jo"><span>Juicy Orange </span><span>~7%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            reflection-->
+            <div class="container upNup" id="reflectionDiv">
+                <label for="reflectionDiv">Reflection</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Dancing Orange</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="do"><span>Dancing Orange </span><span>~18%</span></span>
+                            <span class="custom-option"
+                                  data-value="rw"><span>Reflective White </span><span>~35%</span></span>
+                            <span class="custom-option" data-value="db"><span>Deep Blue </span><span>~23%</span></span>
+                            <span class="custom-option"
+                                  data-value="pg"><span>Parrot Green </span><span>~20%</span></span>
+                            <span class="custom-option"
+                                  data-value="lm"><span>Lively Magenta </span><span>~4%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            breeze-->
+            <div class="container upNup" id="breezeDiv">
+                <label for="breezeDiv">Breeze</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Windy</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+
+                            <span class="custom-option selected"
+                                  data-value="windy"><span>Windy </span><span>~33%</span></span>
+                            <span class="custom-option" data-value="bouncy"><span>Bouncy </span><span>~1%</span></span>
+                            <span class="custom-option" data-value="rising"><span>Rising </span><span>~25%</span></span>
+                            <span class="custom-option" data-value="breeze"><span>Breeze </span><span>~41%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--            knot-->
+            <div class="container upNup" id="knotDiv">
+                <label for="knotDiv">Knot</label>
+                <div class="custom-select-wrapper">
+                    <div class="custom-select">
+                        <div class="custom-select__trigger"><span>Playing Green</span>
+                            <div class="arrow"></div>
+                        </div>
+                        <div class="custom-options">
+                            <span class="custom-option selected"
+                                  data-value="pg"><span>Playing Green </span><span>~25%</span></span>
+                            <span class="custom-option" data-value="rr"><span>Red Nose </span><span>~10%</span></span>
+                            <span class="custom-option"
+                                  data-value="tb"><span>Yellow Bottom </span><span>~39%</span></span>
+                            <span class="custom-option" data-value="pd"><span>Pink Doll </span><span>~26%</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rarityScore upNup" id="rarityScore">
+                <span>Rarity Score: </span>
+                <span class="value">25%</span>
+            </div>
+
+        </div>
+        <div class="display upNup" id="displayDiv">
+            <div class="displayImagesDiv">
+                <img style="position: relative" src="upload%20freelancer/nothing.png" alt="placeholder">
+                <img id="skyimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="balloonimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="shineimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="celestialimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="egroundimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="knotimg" class="knot" src="upload%20freelancer/nothing.png" alt="">
+                <img id="wgroundimg" src="upload%20freelancer/nothing.png" alt="">
+                <img id="windimg" src="upload%20freelancer/nothing.png" alt="">
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer></footer>
+
+<script src="selectOptions/selectOptions.js"></script>
+<script>
+    // <!--
+    // let rarity = new Map([-->
+    //     <!--        ["dawn", 21], ["day", 25], ["dusk", 21], ["mid_day", 1], ["midnight", 1], ["morning", 16], ["night", 15],-->
+    //     <!--        ["cmln", 8.5], ["cmr", 1], ["csm", 8.5], ["cmz", 8], ["crm", 7], ["es", 8], ["mln", 8.5], ["mr", 7], ["ms", 8], ["mz", 8.5], ["no moon", 1], ["rm", 6.5], ["rs", 5], ["sr", 1], ["ss", 5],-->
+    //     <!--        ["sz",], ["eds", 10], ["el", 15], ["eme", 21], ["epm", 19], ["esb", 18], ["ess", 17],-->
+    //     <!--        ["wds", 19], ["wl", 10], ["wme", 20], ["wpm", 18], ["wsb", 10], ["wss", 17],-->
+    //     <!--        ["bb", 9], ["bp", 8.5], ["br", 6.5], ["cpr", 10], ["ds", 9], ["gg", 8], ["jo", 7], ["lg", 8], ["rv", 7], ["sb", 9], ["sblue", 9], ["sy", 9], ["db", 23], ["do", 18], ["lm", 4], ["pg", 20], ["rw", 35],-->
+    //     <!--        ["bouncy", 1], ["breeze", 41], ["rising", 25], ["windy", 33],-->
+    //     <!--        ["pd", 26], ["pg", 25], ["rr", 10], ["tb", 39]-->
+    //     <!--]);-->
+    //
+    // <!--
+    // let text = "";-->
+    //
+    // <!--
+    // for (const rarityElement of rarity.keys()) {-->
+    //     <!--
+    //     text += rarityElement + "\n";-->
+    //     <!--
+    // }-->
+    // <!--    console.log(text);-->
+    //
+    // const data = "a Dawn 21%\n" +
+    //     "b Morning 16%\n" +
+    //     "c Mid-Day 1%\n" +
+    //     "d Day 25%\n" +
+    //     "e Dusk 21%\n" +
+    //     "f Night 15%\n" +
+    //     "g Mid-Night 1%\n" +
+    //     "_\n" +
+    //     "a Sunrise 1%\n" +
+    //     "b Rising Sun 5%\n" +
+    //     "c Sun at Zenith 8.5%\n" +
+    //     "d Evening Sun 8%\n" +
+    //     "e Sunset 5%\n" +
+    //     "f Moonrise 7%\n" +
+    //     "g Rising Moon 6.5%\n" +
+    //     "h Moon at Zenith 8.5%\n" +
+    //     "i Moon Late Night 8.5%\n" +
+    //     "j Moonset 8%\n" +
+    //     "k Crescent Moonrise 1%\n" +
+    //     "l Crescent Rising Moon 7%\n" +
+    //     "m Crescent Moon at Zenith 8%\n" +
+    //     "n Crescent Moon Late Night 8.5%\n" +
+    //     "o Crescent Moonset 8.5%\n" +
+    //     "p Dark Night 1%\n" +
+    //     "_\n" +
+    //     "a Deep Sea 10%\n" +
+    //     "b Sea Shore 17%\n" +
+    //     "c Playful Mud 19%\n" +
+    //     "d Sandy Beach 18%\n" +
+    //     "e Lawn 15%\n" +
+    //     "f Mature Earth 21%\n" +
+    //     "_\n" +
+    //     "a Deep Sea 19%\n" +
+    //     "b Sea Shore 17%\n" +
+    //     "c Playful Mud 18%\n" +
+    //     "d Sandy Beach 10%\n" +
+    //     "e Lawn 10%\n" +
+    //     "f Mature Earth 20%\n" +
+    //     "_\n" +
+    //     "a Grass Green 8 %\n" +
+    //     "b Leaf Green 8%\n" +
+    //     "c Scarlet Black 9%\n" +
+    //     "d Soothing Yellow 9%\n" +
+    //     "e Clown Party Red 10%\n" +
+    //     "f Royal Violet 7%\n" +
+    //     "g Sky Blue 9%\n" +
+    //     "h Deep Sea 9%\n" +
+    //     "i Baby Pink 8.5%\n" +
+    //     "j Blush Red 6.5%\n" +
+    //     "k baby blue 9%\n" +
+    //     "l Juicy Orange 7%\n" +
+    //     "_\n" +
+    //     "a Dancing Orange 18%\n" +
+    //     "b Reflective White 35%\n" +
+    //     "c Deep Blue 23%\n" +
+    //     "d Parrot Green 20%\n" +
+    //     "e Lively Magenta 4%\n" +
+    //     "7)Breeze\n" +
+    //     "a Windy 33%\n" +
+    //     "b Bouncy 1%\n" +
+    //     "c Rising 25%\n" +
+    //     "d Breeze 41%\n" +
+    //     "_\n" +
+    //     "a Playing Green 25%\n" +
+    //     "b Red Nose 10%\n" +
+    //     "c Yellow Bottom 39%\n" +
+    //     "d Pink Doll 26%";
+    //
+    // let text = "";
+    // for (let datum of data.split("\n")) {
+    //     if (datum === "_") {
+    //         text += "\n";
+    //         continue;
+    //     }
+    //     datum = datum.split(" ");
+    //     let name = "";
+    //     for (let i = 1; i < datum.length - 1; i++) {
+    //         name += datum[i]+" ";
+    //     }
+    //
+    //     text += "<span class=\"custom-option\" data-value=\"\"><span>" + name + "</span><span>~" + datum[datum.length-1] + "</span></span>\n";
+    // }
+    // console.log(text);
+</script>
+</body>
+</html>

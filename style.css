@@ -1,0 +1,155 @@
+
+body {
+    background-image: url("other images/background.jpg");
+    background-repeat: repeat;
+    color: white;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+}
+
+header {
+    text-align: center;
+}
+
+header h1 {
+    font-size: 5rem;
+    text-transform: capitalize;
+    font-weight: bolder;
+}
+
+.mainframe {
+    display: grid;
+    grid-gap: 10px;
+    justify-content: center;
+    width: 100%;
+    min-height: 80vh;
+    grid-template-areas: "options display";
+    grid-template-columns: 1fr 1fr;
+}
+
+.options {
+    grid-area: options;
+    width: 55vw;
+    max-width: 600px;
+    justify-self: flex-end;
+    margin-left: 100px;
+}
+
+.display {
+    grid-area: display;
+    width: 35vw;
+    max-width: 500px;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+.rarityScore {
+    font-size: 3rem;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: bold;
+}
+
+.rarityScore .value {
+    color: yellow;
+}
+
+.display {
+    position: relative;
+}
+
+.display img {
+    max-width: 100%;
+}
+
+.displayImagesDiv img {
+    max-width: 80%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+    bottom: 19%;
+    right: 0;
+}
+
+.knot {
+    position: relative;
+    max-width: 100%;
+    left: 20.5%;
+    transform: translateY(10%);
+}
+
+
+footer {
+    padding: 25px;
+}
+
+.upNup {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .mainframe {
+        grid-template-areas:"display""options";
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+
+    }
+
+    .options {
+        width: 100%;
+        max-width: none;
+        margin-left: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+
+        min-height: 300px;
+
+    }
+
+    .display {
+        width: 100%;
+        max-height: 50vh;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .displayImagesDiv img {
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .displayImagesDiv .knot {
+        transform: translate(-49.5%, 9.5%);
+    }
+
+    .container {
+        min-width: 250px;
+    }
+
+    .container:first-child {
+        margin-left: 50px;
+    }
+
+    .rarityScore {
+        min-width: 90vw;
+        text-align: center;
+        align-content: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    header h1{
+        font-size: 4rem;
+    }
+}
