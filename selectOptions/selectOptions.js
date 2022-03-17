@@ -96,7 +96,7 @@ function calculateRarityScore() {
 
 function displayOnSelecting(optionsDivID, elementToDisplayID) {
     for (const element of document.querySelectorAll("#" + optionsDivID + " .custom-option")) {
-        element.addEventListener('mouseup', evt => {
+        element.addEventListener('click', evt => {
             document.querySelector("#" + elementToDisplayID).style.display = "inline-flex";
             document.getElementById(elementToDisplayID).scrollIntoView({behavior: 'smooth'});
         });
