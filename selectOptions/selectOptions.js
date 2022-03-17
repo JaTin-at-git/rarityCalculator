@@ -126,3 +126,8 @@ document.querySelector("#collectionNone").addEventListener('click', function () 
         element.style.display = "none";
     }
 });
+
+//in mobiles, rarity was not being calculated on click, so adding a listener that helps
+document.querySelector(".options").addEventListener("mouseup",function () {
+   calculateRarityScore();
+});

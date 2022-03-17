@@ -1,26 +1,42 @@
+
 *,
 *:after,
 *:before {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 .container {
     margin: 15px;
+    /*not an error*/
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     width: 40%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     /*overflow-x: scroll;*/
 }
 
 .custom-select-wrapper {
     position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
     user-select: none;
     width: 100%;
     margin-top: 5px;
 }
 
 .custom-select {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     border-width: 0 2px 0 2px;
     border-style: solid;
@@ -29,8 +45,14 @@
 
 .custom-select__trigger {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 0 22px;
     /*font-size: 20px;*/
@@ -52,6 +74,8 @@
     border: 2px solid black;
     border-top: 0;
     background: #fff;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     opacity: 0;
     visibility: hidden;
@@ -76,11 +100,19 @@
     font-weight: 300;
     line-height: 30px;
     cursor: pointer;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
     background-color: rgba(0, 0, 0, 0.5);
     color: #d9d9d9;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     /*width: 100%;*/
 }
@@ -109,27 +141,37 @@
     bottom: 0px;
     width: 0.15rem;
     height: 100%;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
     transition: all 0.5s;
 }
 
 .arrow::before {
     left: -5px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
     background-color: white;
 }
 
 .arrow::after {
     left: 5px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
     background-color: white;
 }
 
 .open .arrow::before {
     left: -5px;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
 
 .open .arrow::after {
     left: 5px;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
 }

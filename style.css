@@ -18,16 +18,25 @@ header h1 {
 }
 
 .mainframe {
+    display: -ms-grid;
     display: grid;
     grid-gap: 10px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
-    min-height: 80vh;
+    max-height: 80vh;
     grid-template-areas: "options display";
+    -ms-grid-columns: 1fr 10px 1fr;
     grid-template-columns: 1fr 1fr;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
 }
 
 .options {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: options;
     width: 55vw;
     max-width: 600px;
@@ -36,6 +45,8 @@ header h1 {
 }
 
 .display {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: display;
     width: 35vw;
     max-width: 500px;
@@ -67,17 +78,22 @@ label {
 .displayImagesDiv img {
     max-width: 80%;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     border-radius: 3px;
-    bottom: 19%;
+    bottom: -14%;
     right: 0;
 }
 
 .knot {
     position: relative;
     max-width: 100%;
-    left: 20.5%;
+    -webkit-transform: translateY(10%);
+    -ms-transform: translateY(10%);
     transform: translateY(10%);
 }
 
@@ -90,9 +106,21 @@ footer {
     display: none;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) {
+    .displayImagesDiv img {
+        top: 40%;
+        right: 20px;
+    }
+    .knot{
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
     .mainframe {
+        -ms-grid-rows: auto 10px auto;
         grid-template-areas:"display""options";
+        -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     }
 
@@ -105,8 +133,14 @@ footer {
         max-width: none;
         margin-left: 20px;
         margin-top: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
         flex-direction: row;
+        -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
         overflow-x: scroll;
 
@@ -123,12 +157,16 @@ footer {
 
     .displayImagesDiv img {
         top: 0;
-        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
         transform: translateX(-50%);
+        max-width: 280px;
     }
 
     .displayImagesDiv .knot {
-        transform: translate(-49.5%, 9.5%);
+        -webkit-transform: translate(-49.3%, 10.3%);
+        -ms-transform: translate(-49.3%, 10.3%);
+        transform: translate(-49.3%, 10.3%);
     }
 
     .container {
@@ -142,9 +180,23 @@ footer {
     .rarityScore {
         min-width: 90vw;
         text-align: center;
+        -ms-flex-line-pack: center;
         align-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
         justify-content: flex-start;
+    }
+    .options {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+    .display {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
     }
 }
 
